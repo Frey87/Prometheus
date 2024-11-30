@@ -5,15 +5,15 @@ class User:
   
   def __init__(self) -> None:
     self.name = None
-    slf.secon_name = None
+    slf.second_name = None
 
   def create(self):
     self.name = "Sergii"
-    self.secon_name = "Butenko"
+    self.second_name = "Butenko"
 
   def remove(self):
     self.name = ""
-    self.secon_name = ""
+    self.second_name = ""
 
 
 @pytest.fixture
