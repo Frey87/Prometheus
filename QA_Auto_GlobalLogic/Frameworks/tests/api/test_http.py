@@ -9,4 +9,6 @@ def test_first_request():
 @pytest.mark.http
 def test_second_request():
   r = requests.get("https://api.github.com/users/defunkt")
-  print(f"Response is {r.text}")
+  print(f"Response is {r.json()}")
+  print(f"Response Status Code {r.status_code}")
+  print(f"Response Headers is {r.headers}")
