@@ -7,8 +7,17 @@ def test_first_request():
   print(f"Response is {r.text}")
 
 @pytest.mark.http
-def test_second_request():
+def test_secon_request():
   r = requests.get("https://api.github.com/users/defunkt")
   print(f"Response is {r.json()}")
   print(f"Response Status Code {r.status_code}")
   print(f"Response Headers is {r.headers}")
+  
+@pytest.mark.http
+def test_second_request():
+  r = requests.get("https://api.github.com/users/defunkt")
+  bodyy = r.json()
+  headers = r.headers
+  assert body['name'] == "Chris Wanstrath"
+  assert r.status_code == 200
+  assert headers["Server"] == "GitHub.com"
