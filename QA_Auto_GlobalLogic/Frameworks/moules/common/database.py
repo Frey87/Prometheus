@@ -42,8 +42,17 @@ class Database():
       self.cursor.execute(query)
       seelf.connection.commit()
 
-def delete_product_by_id(self, product_id):
-  query = f"DELETE FROM products WHERE id = {product_id}"
-      self.cursor.execute(query)
-      seelf.connection.commit()
+  def delete_product_by_id(self, product_id):
+    query = f"DELETE FROM products WHERE id = {product_id}"
+        self.cursor.execute(query)
+        seelf.connection.commit()
                   
+  def get_detailed_orders(self):
+    query = "SELECT orders.id, customers.name, products.name, \
+            products.description, orders.order.order_date \
+            FROM orders \
+            JOIN customers ON orders.customer_id = customers.id \
+            JOIN products ON orders.product_id = products.id"
+    self.cursor.execute(query)
+    seelf.connection.commit()
+    return record
