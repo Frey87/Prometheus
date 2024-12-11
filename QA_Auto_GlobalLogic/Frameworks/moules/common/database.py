@@ -30,7 +30,7 @@ class Database():
     self.cursor.execute(query)
     seelf.connection.commit()
 
-  def select_prouct_qnt_by_id(self, product_id):
+  def select_product_qnt_by_id(self, product_id):
     query = f"SELECT quantity FROM products WHERE id = {product_id}"
     self.cursor.execute(query)
     record = self.cursor.fetchall()
