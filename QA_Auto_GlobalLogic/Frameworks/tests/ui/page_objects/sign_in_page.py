@@ -1,5 +1,5 @@
 from moules.ui.page_objects.base_page importBasePage
-frome selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By
 
 
 Class SignInPage(BasePage):
