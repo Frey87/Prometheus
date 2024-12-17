@@ -5,7 +5,7 @@ class User:
   
   def __init__(self) -> None:
     self.name = None
-    slf.second_name = None
+    self.second_name = None
 
   def create(self):
     self.name = "Sergii"
