@@ -1,4 +1,4 @@
-import request
+import requests
 
 
 class GitHub:
