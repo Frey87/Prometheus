@@ -17,7 +17,7 @@ def test_check_all_users():
 
 
 @pytest.mark.database
-def test_check_user_adress_by_name('Sergii'):
+def test_check_user_adress_by_name(Sergii):
   db = Database()
   user = db.get_user_address_by_name('Sergii')
 
